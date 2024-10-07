@@ -29,7 +29,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     // Navigate to next screen after the animation completes
     Timer(Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => Home()),  // Replace with your next screen
+        MaterialPageRoute(builder: (_) => HomePage()),  // Replace with your next screen
       );
     });
   }

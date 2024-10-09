@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gigsgh/pages/login.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const Login());
 }
 
 class MainApp extends StatelessWidget {

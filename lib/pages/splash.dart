@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:gigsgh/pages/login.dart';
+
 class Splash extends StatefulWidget {
+  const Splash({super.key});
+
   @override
   _SplashState createState() => _SplashState();
 }
@@ -16,7 +20,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
     );
     
     _animation = CurvedAnimation(
@@ -27,9 +31,9 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
     _controller.forward();
 
     // Navigate to next screen after the animation completes
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HomePage()),  // Replace with your next screen
+        MaterialPageRoute(builder: (_) => const Login()),  // Replace with your next screen
       );
     });
   }
